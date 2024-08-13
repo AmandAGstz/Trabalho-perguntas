@@ -1,0 +1,165 @@
+
+:root {
+    --cor-fundo: #72B5A4;
+    --cor-principal: #595757;
+    --cor-secundaria: #F79A87;
+    --cor-destaque: #F2CEAB;
+    --cor-texto: #ffffff;
+    --cor-resposta-correta: #28c035; /* Verde para resposta correta */
+    --cor-resposta-incorreta: #F44336; /* Vermelho para resposta incorreta */
+    --cor-botao-proxima: #42d7f196; /* Cor do botão "Próxima Pergunta" */
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 18px;
+    margin: 0;
+    padding: 20px;
+}
+
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: var(--cor-destaque);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.caixa-perguntas {
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    transition: background-color 0.3s;
+    margin: 12px 0;
+    font-size: 18px;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Estilos para o botão "Próxima Pergunta" */
+#proxima-pergunta {
+    background-color: var(--cor-botao-proxima);
+    color: var(--cor-texto);
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+/* Estilo para resposta correta e incorreta */
+.resposta-correta {
+    background-color: var(--cor-resposta-correta);
+    color: var(--cor-texto);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.resposta-incorreta {
+    background-color: var(--cor-resposta-incorreta);
+    color: var(--cor-texto);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .caixa-principal {
+        padding: 15px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .caixa-principal {
+        width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #proxima-pergunta {
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+.menu-perguntas {
+    margin-bottom: 20px;
+}
+
+.menu-perguntas ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-perguntas li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.menu-perguntas a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: medium;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    background-color: #F15E5E;
+
+    /* Adicionando padding para aumentar o tamanho do fundo do botão */
+    padding: 0px 40px; /* Ajuste os valores conforme necessário */
+
+    /* Adicionando margem para espaçamento entre os botões */
+    margin: px 20px; /* Ajuste conforme necessário */
+}
+.menu-perguntas a:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+}
